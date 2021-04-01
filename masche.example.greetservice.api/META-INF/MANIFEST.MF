@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: GreetService Example API
+Bundle-SymbolicName: masche.example.greetservice.api
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: masche.example.greetservice.api
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.google.protobuf,
+ com.salesforce.reactivegrpc.common;version="1.0.0",
+ com.salesforce.rxgrpc.stub;version="1.0.0",
+ io.reactivex;version="2.1.10"
+Require-Bundle: org.eclipse.ecf.provider.grpc;bundle-version="1.2.0",
+ com.google.guava
+Export-Package: masche.example.greet.v1

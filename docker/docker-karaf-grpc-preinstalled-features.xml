@@ -1,0 +1,17 @@
+<features
+	name="example-greet-service-1.0.0"
+	xmlns="http://karaf.apache.org/xmlns/features/v1.3.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
+
+	<repository>https://raw.githubusercontent.com/ECF/grpc-RemoteServicesProvider/master/build/karaf-features.xml</repository>
+
+
+	<feature name="example-greet-service" version="1.0.0"
+		description="Example Greet Service" install="auto">
+		<feature>ecf-rs-distribution-grpc</feature>
+		<bundle>https://raw.githubusercontent.com/martinschemel/docker-karaf-grpc/master/build/masche.example.greetservice.api-1.0.0-SNAPSHOT.jar</bundle>
+		<bundle>https://raw.githubusercontent.com/martinschemel/docker-karaf-grpc/master/build/masche.example.greetservice.impl-1.0.0-SNAPSHOT.jar</bundle>
+	</feature>
+
+</features>

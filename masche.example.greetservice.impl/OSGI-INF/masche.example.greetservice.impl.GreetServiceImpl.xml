@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="masche.example.greetservice.impl.GreetServiceImpl">
+   <property name="service.exported.interfaces" value="*"/>
+   <property name="service.exported.configs" value="ecf.grpc.server"/>
+   <property name="ecf.grpc.server.port" value="50002"/>
+   <service>
+      <provide interface="masche.example.greet.v1.GreetServiceService"/>
+   </service>
+   <implementation class="masche.example.greetservice.impl.GreetServiceImpl"/>
+</scr:component>

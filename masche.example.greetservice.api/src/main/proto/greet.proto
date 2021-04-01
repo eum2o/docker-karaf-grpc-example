@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package greet;
+
+option java_package = "masche.example.greet.v1";
+option java_multiple_files = true;
+
+message Greeting {
+	string title = 1;
+	string name = 2;
+}
+
+message GreetRequest {
+	Greeting greeting = 1;
+}
+
+message GreetResponse {
+	string result = 1;
+}
+
+service GreetService {
+	// Unary
+	rpc Greet(GreetRequest) returns (GreetResponse) {};
+}
